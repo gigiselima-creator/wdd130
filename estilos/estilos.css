@@ -6,7 +6,7 @@
 }
 
 main {
-    max-width: 840;
+    max-width: 840px;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 
 nav {
     background-color: steelblue;
-    padding: auto;
+    padding: 0;
 }
 
 nav a {
