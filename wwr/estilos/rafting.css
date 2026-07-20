@@ -138,3 +138,7 @@ footer {
 .social a {
     text-decoration: none;
 }
+
+.social img {
+    width: 35px;
+}
