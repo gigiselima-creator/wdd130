@@ -130,15 +130,15 @@ footer {
     padding: 15px;
 }
 
-.social {
+.rede-social {
     display: flex;
     gap: 15px;
 }
 
-.social a {
+.rede-social a {
     text-decoration: none;
 }
 
-.social img {
+.rede-social img {
     width: 35px;
 }
