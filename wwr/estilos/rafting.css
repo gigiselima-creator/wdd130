@@ -1,8 +1,5 @@
 :root {
     --primary-color: #396E94;
-    --secondary-color: #E7C24F;
-    --accent1-color: #A43312;
-    --accent2-color: #FFFFFF;
 
     --heading-font: "Georgia", serif;
     --paragraph-font: Arial, Helvetica, sans-serif;
@@ -130,15 +127,15 @@ footer {
     padding: 15px;
 }
 
-.rede-social {
+.redes-sociais {
     display: flex;
     gap: 15px;
 }
 
-.rede-social a {
+.redes-sociais a {
     text-decoration: none;
 }
 
-.rede-social img {
+.redes-sociais img {
     width: 35px;
 }
