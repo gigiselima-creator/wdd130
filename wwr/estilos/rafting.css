@@ -172,6 +172,11 @@ footer {
     padding: 15px;
 }
 
+footer p {
+    white-space: nowrap;
+    color: #ffffff;
+}
+
 .socialmedia {
     display: flex;
     justify-content: flex-end;
