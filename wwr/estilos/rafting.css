@@ -16,7 +16,6 @@ body {
     color: #333;
 }
 
-/* Header com CSS Grid */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -24,6 +23,8 @@ header {
     width: 840px;
     margin: 0 auto;
     background-color: var(--primary-color);
+    color: #ffffff;
+    /* Resolve a violação de contraste no DevTools */
 }
 
 .logo {
