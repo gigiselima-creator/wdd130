@@ -1,62 +1,223 @@
+/* Reset básico e configurações globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Cabeçalho e Menu (Topo Roxo/Lilás)
+   ========================================================================== */
 header {
-    color: #ffffff;
-}
-
-footer p {
-    white-space: nowrap;
-    color: #ffffff;
-}
-
-.contato-main h1 {
-    text-align: center;
-    color: var(--primary-color);
-    font-family: var(--heading-font);
-    margin: 30px 0 10px;
-}
-
-/* Informações da Empresa e Mapa Google */
-.info-contato-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    background: #f4f8fb;
-    padding: 25px;
-    border-radius: 8px;
-    border-left: 5px solid var(--primary-color);
+    align-items: center;
+    background-color: #d1c4e9;
+    /* Tom de lilás/roxo idêntico ao wireframe */
+    padding: 20px 40px;
+    border-bottom: 2px solid #333333;
 }
 
-.info-empresa {
-    flex: 1;
+.logo {
+    width: 140px;
+    height: 80px;
+    object-fit: contain;
+    background-color: #e0e0e0;
+    border: 1px solid #888888;
+    padding: 5px;
+    display: block;
 }
 
-.info-empresa h2 {
-    text-align: left;
-    margin-bottom: 15px;
+header nav ul {
+    display: flex;
+    list-style: none;
 }
 
-.info-empresa p {
-    text-align: left;
-    padding: 0;
-    margin-bottom: 10px;
-    font-size: 1rem;
+header nav ul li a {
+    display: block;
+    padding: 8px 18px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border: 1.5px solid #333333;
+    margin-left: -1.5px;
+    /* Une as bordas dos botões lado a lado */
 }
 
+header nav ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* ==========================================================================
+   Conteúdo Principal (.contato-main)
+   ========================================================================== */
+.contato-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Topo: Título e Endereço Centralizados */
+.empresa-cabecalho {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.empresa-cabecalho h1 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.empresa-cabecalho address {
+    font-style: normal;
+    line-height: 1.4;
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.05rem;
+}
+
+.empresa-cabecalho address a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* Seção Lado a Lado: Mapa (Esquerda) e Formulário (Direita) */
+.mapa-e-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: stretch;
+}
+
+/* Container do Mapa Google */
 .mapa-container {
-    flex: 1;
+    width: 100%;
+    min-height: 320px;
+    background-color: #e0e0e0;
+    border: 1.5px solid #555555;
 }
 
 .mapa-container iframe {
-    width: 100%;
-    height: 200px;
     border: none;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 100%;
 }
 
-/* Equipe de Funcionários */
+/* Formulário de Contato */
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.form-row label {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #000000;
+    padding-top: 6px;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1.5px solid #333333;
+    border-radius: 2px;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+}
+
+.form-row textarea {
+    resize: vertical;
+}
+
+/* Opções de Radio */
+.radio-row {
+    align-items: flex-start;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.radio-options label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 0;
+    cursor: pointer;
+}
+
+/* Checkbox */
+.checkbox-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.checkbox-row label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* Botão Enviar */
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #e0e0e0;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1.5px solid #333333;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.btn-submit:hover {
+    background-color: #d0d0d0;
+}
+
+/* ==========================================================================
+   Seção da Equipe (Quadro Delimitado)
+   ========================================================================== */
 .equipe-section {
-    margin: 40px 0;
+    border: 1.5px solid #333333;
+    padding: 25px 20px;
+    margin-bottom: 40px;
+    background-color: #fcfcfc;
+}
+
+.equipe-section h2 {
+    text-align: center;
+    color: #000000;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    font-weight: bold;
 }
 
 .equipe-grid {
@@ -66,132 +227,64 @@ footer p {
 }
 
 .funcionario {
-    flex: 1;
     text-align: center;
-    background: #fafafa;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    flex: 1;
 }
 
 .funcionario img {
-    width: 100%;
-    height: 180px;
+    width: 150px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 12px;
-    border: 3px solid var(--primary-color);
-}
-
-.funcionario figcaption strong {
+    background-color: #e0e0e0;
+    border: 1px solid #888888;
+    margin: 0 auto 10px auto;
     display: block;
-    font-size: 1.05rem;
-    color: #222;
 }
 
-.funcionario figcaption span {
-    display: block;
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 4px;
-}
-
-/* Formulário de Contato */
-.formulario-section {
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.form-contato {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.form-group label {
+.funcionario figcaption {
     font-weight: bold;
-    color: #333;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     font-size: 1rem;
-    font-family: var(--paragraph-font);
+    color: #000000;
 }
 
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 4px rgba(57, 110, 148, 0.4);
-}
-
-/* Radio Buttons */
-.radio-group {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 4px;
-}
-
-.radio-group legend {
-    font-weight: bold;
-    padding: 0 8px;
-    color: #333;
-}
-
-.radio-group label {
-    font-weight: normal;
+/* ==========================================================================
+   Rodapé e Mídias Sociais (Roxo/Lilás)
+   ========================================================================== */
+footer {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
-    margin-top: 8px;
-    cursor: pointer;
+    background-color: #d1c4e9;
+    padding: 15px 40px;
+    border-top: 2px solid #333333;
 }
 
-/* Checkbox */
-.checkbox-group label {
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-}
-
-/* Botão de Envio Destinguível */
-.btn-submit {
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 1.1rem;
+footer p {
+    color: #000000;
     font-weight: bold;
-    padding: 14px 28px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    align-self: center;
-    transition: background-color 0.3s, transform 0.1s;
-    width: 100%;
-    max-width: 250px;
+    font-size: 0.95rem;
+    margin: 0;
 }
 
-.btn-submit:hover {
-    background-color: #2b5370;
+.redes-sociais {
+    display: flex;
+    gap: 12px;
 }
 
-.btn-submit:active {
-    transform: scale(0.98);
+.redes-sociais a {
+    display: inline-block;
+}
+
+.redes-sociais img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    background-color: #ffffff;
+    border: 1.5px solid #333333;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.redes-sociais img:hover {
+    background-color: #f0f0f0;
 }
