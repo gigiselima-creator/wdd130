@@ -14,7 +14,7 @@
 <body>
     <header>
         <a id="logo_link" href="index.html">
-            <img class="logo" src="imagens/logotipo.jpg" alt="Natural Living">
+            <img class="logo" src="imagens/logotipo.jpg" alt="Companhia de Rafting em Corredeiras">
         </a>
         <nav>
             <ul>
@@ -27,7 +27,7 @@
     </header>
 
     <main class="contato-main">
-        <!-- Título e Informações da Empresa (Topo) -->
+        <!-- Título e Informações da Empresa (Topo Centralizado) -->
         <section class="empresa-cabecalho">
             <h1>Companhia de Rafting em Corredeiras</h1>
             <address>
@@ -38,32 +38,29 @@
             </address>
         </section>
 
-        <!-- Container Lado a Lado: Mapa à Esquerda e Formulário à Direita (div para evitar o aviso do validador) -->
+        <!-- Container Lado a Lado: Mapa à Esquerda e Formulário à Direita -->
         <div class="mapa-e-formulario">
             <div class="mapa-container">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197582239339!2d-46.65867!3d-23.561414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzQxLjEiUyA0NsKwMzknMzEnti0!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197582239339!2d-46.65867!3d-23.561414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzQxLjEiUyA0NsKwMzknMzEuMiJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr"
                   width="600" height="450" loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
                   title="Localização da Companhia no Google Maps"></iframe>
             </div>
 
             <form action="#" method="post" class="form-contato">
-                <!-- 1. Campo Nome (input text) -->
                 <div class="form-row">
                     <label for="nome">Nome</label>
                     <input type="text" id="nome" name="nome" placeholder="Digite aqui" required>
                 </div>
 
-                <!-- Campo E-mail (input email) -->
                 <div class="form-row">
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" placeholder="Digite aqui" required>
                 </div>
 
-                <!-- 2. Três botões Radio com id e label individual para cada um -->
                 <div class="form-row radio-row">
-                    <label>Propósito da Mensagem</label>
+                    <span class="label-title">Propósito da Mensagem</span>
                     <div class="radio-options">
                         <label for="duvida">
                             <input type="radio" id="duvida" name="finalidade" value="Dúvida Geral"
@@ -82,14 +79,12 @@
                     </div>
                 </div>
 
-                <!-- 3. Campo Mensagem (textarea) -->
                 <div class="form-row">
                     <label for="mensagem">Mensagem</label>
                     <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite aqui"
                       required></textarea>
                 </div>
 
-                <!-- 4. Campo Checkbox com id e label associada -->
                 <div class="form-row checkbox-row">
                     <label for="newsletter">
                         <input type="checkbox" id="newsletter" name="newsletter" value="sim">
@@ -97,33 +92,33 @@
                     </label>
                 </div>
 
-                <!-- 5. Botão de Envio -->
                 <button type="submit" id="btn-enviar" name="btn-enviar" class="btn-submit">Entrar em
                     Contato!</button>
             </form>
+        </div>
 
-            <!-- Seção da Equipe (Abaixo) -->
-            <section class="equipe-section">
-                <h2>Estamos Aqui para Serví-lo</h2>
-                <div class="equipe-grid">
-                    <figure class="funcionario">
-                        <img src="imagens/funcionario1.jpg" alt="Perfil do Funcionário">
-                        <figcaption>Perfil do Funcionário</figcaption>
-                    </figure>
-                    <figure class="funcionario">
-                        <img src="imagens/funcionario2.jpg" alt="Perfil do Funcionário">
-                        <figcaption>Perfil do Funcionário</figcaption>
-                    </figure>
-                    <figure class="funcionario">
-                        <img src="imagens/funcionario3.jpg" alt="Perfil do Funcionário">
-                        <figcaption>Perfil do Funcionário</figcaption>
-                    </figure>
-                </div>
-            </section>
+        <!-- Seção da Equipe -->
+        <section class="equipe-section">
+            <h2>Estamos Aqui para Serví-lo</h2>
+            <div class="equipe-grid">
+                <figure class="funcionario">
+                    <img src="imagens/funcionario1.jpg" alt="Perfil do Funcionário">
+                    <figcaption>Perfil do Funcionário</figcaption>
+                </figure>
+                <figure class="funcionario">
+                    <img src="imagens/funcionario2.jpg" alt="Perfil do Funcionário">
+                    <figcaption>Perfil do Funcionário</figcaption>
+                </figure>
+                <figure class="funcionario">
+                    <img src="imagens/funcionario3.jpg" alt="Perfil do Funcionário">
+                    <figcaption>Perfil do Funcionário</figcaption>
+                </figure>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>©️2026 Natural Living | Gisele Albuquerque</p>
+        <p>Conteúdo de Rodapé incluindo Ícones/Links de Mídia Social</p>
         <nav class="redes-sociais">
             <a href="https://www.facebook.com"><img src="imagens/facebook.png" alt="Facebook"></a>
             <a href="https://www.whatsapp.com"><img src="imagens/whatsapp.png" alt="Whatsapp"></a>
