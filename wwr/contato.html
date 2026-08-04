@@ -38,74 +38,88 @@
             </address>
         </section>
 
-        <!-- Container Lado a Lado: Mapa à Esquerda e Formulário à Direita -->
-        <section class="mapa-e-formulario">
+        <!-- Container Lado a Lado: Mapa à Esquerda e Formulário à Direita (div para evitar o aviso do validador) -->
+        <div class="mapa-e-formulario">
             <div class="mapa-container">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197582239339!2d-46.65867!3d-23.561414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzQxLjEiUyA0NsKwMzknMzEuMiJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr"
-                  width="100%" height="100%" loading="lazy"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197582239339!2d-46.65867!3d-23.561414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzQxLjEiUyA0NsKwMzknMzEnti0!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr"
+                  width="600" height="450" loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
-                  title="Localização no Google Maps"></iframe>
+                  title="Localização da Companhia no Google Maps"></iframe>
             </div>
 
             <form action="#" method="post" class="form-contato">
+                <!-- 1. Campo Nome (input text) -->
                 <div class="form-row">
                     <label for="nome">Nome</label>
                     <input type="text" id="nome" name="nome" placeholder="Digite aqui" required>
                 </div>
 
+                <!-- Campo E-mail (input email) -->
                 <div class="form-row">
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" placeholder="Digite aqui" required>
                 </div>
 
+                <!-- 2. Três botões Radio com id e label individual para cada um -->
                 <div class="form-row radio-row">
                     <label>Propósito da Mensagem</label>
                     <div class="radio-options">
-                        <label><input type="radio" name="finalidade" value="Dúvida Geral" checked>
-                            Dúvida Geral</label>
-                        <label><input type="radio" name="finalidade" value="Pergunta sobre Reserva">
-                            Pergunta sobre Reserva</label>
-                        <label><input type="radio" name="finalidade" value="Sugestão">
-                            Sugestão</label>
+                        <label for="duvida">
+                            <input type="radio" id="duvida" name="finalidade" value="Dúvida Geral"
+                              checked>
+                            Dúvida Geral
+                        </label>
+                        <label for="reserva">
+                            <input type="radio" id="reserva" name="finalidade"
+                              value="Pergunta sobre Reserva">
+                            Pergunta sobre Reserva
+                        </label>
+                        <label for="sugestao">
+                            <input type="radio" id="sugestao" name="finalidade" value="Sugestão">
+                            Sugestão
+                        </label>
                     </div>
                 </div>
 
+                <!-- 3. Campo Mensagem (textarea) -->
                 <div class="form-row">
                     <label for="mensagem">Mensagem</label>
                     <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite aqui"
                       required></textarea>
                 </div>
 
+                <!-- 4. Campo Checkbox com id e label associada -->
                 <div class="form-row checkbox-row">
-                    <label>
-                        <input type="checkbox" name="newsletter" value="sim">
+                    <label for="newsletter">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="sim">
                         Por favor, me inscreva na newsletter mensal
                     </label>
                 </div>
 
-                <button type="submit" class="btn-submit">Entrar em Contato!</button>
+                <!-- 5. Botão de Envio -->
+                <button type="submit" id="btn-enviar" name="btn-enviar" class="btn-submit">Entrar em
+                    Contato!</button>
             </form>
-        </section>
 
-        <!-- Seção da Equipe (Abaixo) -->
-        <section class="equipe-section">
-            <h2>Estamos Aqui para Serví-lo</h2>
-            <div class="equipe-grid">
-                <figure class="funcionario">
-                    <img src="imagens/funcionario1.jpg" alt="Perfil do Funcionário">
-                    <figcaption>Perfil do Funcionário</figcaption>
-                </figure>
-                <figure class="funcionario">
-                    <img src="imagens/funcionario2.jpg" alt="Perfil do Funcionário">
-                    <figcaption>Perfil do Funcionário</figcaption>
-                </figure>
-                <figure class="funcionario">
-                    <img src="imagens/funcionario3.jpg" alt="Perfil do Funcionário">
-                    <figcaption>Perfil do Funcionário</figcaption>
-                </figure>
-            </div>
-        </section>
+            <!-- Seção da Equipe (Abaixo) -->
+            <section class="equipe-section">
+                <h2>Estamos Aqui para Serví-lo</h2>
+                <div class="equipe-grid">
+                    <figure class="funcionario">
+                        <img src="imagens/funcionario1.jpg" alt="Perfil do Funcionário">
+                        <figcaption>Perfil do Funcionário</figcaption>
+                    </figure>
+                    <figure class="funcionario">
+                        <img src="imagens/funcionario2.jpg" alt="Perfil do Funcionário">
+                        <figcaption>Perfil do Funcionário</figcaption>
+                    </figure>
+                    <figure class="funcionario">
+                        <img src="imagens/funcionario3.jpg" alt="Perfil do Funcionário">
+                        <figcaption>Perfil do Funcionário</figcaption>
+                    </figure>
+                </div>
+            </section>
     </main>
 
     <footer>
