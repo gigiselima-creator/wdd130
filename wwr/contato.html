@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Fale conosco - Natural Living. Entre em contato com a nossa equipe para tirar dúvidas, fazer reservas de passeios de rafting, enviar sugestões ou visitar nosso escritório.">
+    <meta name="author" content="Gisele Rodrigues de Lima Albuquerque">
+    <title>Fale Conosco | Natural Living</title>
+    <link rel="stylesheet" href="estilos/rafting.css">
+</head>
+
+<body>
+    <header>
+        <a id="logo_link" href="index.html">
+            <img class="logo" src="imagens/logotipo.jpg" alt="Natural Living">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="passeios.html">Passeios</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contato-main">
+        <h1>Fale Conosco</h1>
+
+        <!-- Informações da empresa e mapa incorporado do Google Maps -->
+        <section class="info-contato-container">
+            <div class="info-empresa">
+                <h2>Nossos Contatos</h2>
+                <p><strong>Endereço:</strong> Av. das Corredeiras, 1000 - Rio Bonito, SP</p>
+                <p><strong>Telefone:</strong> (11) 98765-4321 / (11) 3344-5566</p>
+                <p><strong>E-mail:</strong> contato@naturalliving.com.br</p>
+            </div>
+            <div class="mapa-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197582239339!2d-46.65867!3d-23.561414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzQxLjEiUyA0NsKwMzknMzEuMiJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr"
+                  width="100%" height="200" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Localização da Natural Living no Google Maps"></iframe>
+            </div>
+        </section>
+
+        <!-- Imagens de perfil dos funcionários com cargos -->
+        <section class="equipe-section">
+            <h2>Nossa Equipe</h2>
+            <div class="equipe-grid">
+                <figure class="funcionario">
+                    <img src="imagens/funcionario1.jpg" alt="Foto de Carlos Silva">
+                    <figcaption>
+                        <strong>Carlos Silva</strong>
+                        <span>Gerente de Operações</span>
+                    </figcaption>
+                </figure>
+                <figure class="funcionario">
+                    <img src="imagens/funcionario2.jpg" alt="Foto de Ana Souza">
+                    <figcaption>
+                        <strong>Ana Souza</strong>
+                        <span>Guia Sênior de Rafting</span>
+                    </figcaption>
+                </figure>
+                <figure class="funcionario">
+                    <img src="imagens/funcionario3.jpg" alt="Foto de Lucas Mendes">
+                    <figcaption>
+                        <strong>Lucas Mendes</strong>
+                        <span>Coordenador de Segurança</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Formulário de Contato -->
+        <section class="formulario-section">
+            <h2>Envie uma Mensagem</h2>
+            <form action="#" method="post" class="form-contato">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required
+                      placeholder="seuemail@exemplo.com">
+                </div>
+
+                <fieldset class="form-group radio-group">
+                    <legend>Finalidade da Mensagem:</legend>
+                    <label>
+                        <input type="radio" name="finalidade" value="Consulta Geral" checked>
+                        Consulta Geral
+                    </label>
+                    <label>
+                        <input type="radio" name="finalidade" value="Pergunta sobre Reserva">
+                        Pergunta sobre Reserva
+                    </label>
+                    <label>
+                        <input type="radio" name="finalidade" value="Sugestão de Site">
+                        Sugestão de Site
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required
+                      placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label for="newsletter">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="sim">
+                        Quero receber a newsletter mensal
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;2026 Natural Living | Gisele Albuquerque</p>
+        <nav class="redes-sociais">
+            <a href="https://www.facebook.com">
+                <img src="imagens/facebook.png" alt="ícone Facebook"></a>
+            <a href="https://www.whatsapp.com">
+                <img src="imagens/whatsapp.png" alt="ícone Whatsapp"></a>
+            <a href="https://www.instagram.com">
+                <img src="imagens/instagram.png" alt="ícone Instagram"></a>
+        </nav>
+    </footer>
+</body>
+
+</html>

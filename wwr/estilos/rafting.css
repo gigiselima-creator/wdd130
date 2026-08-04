@@ -1,175 +1,5 @@
-:root {
-    --primary-color: #396E94;
-    --heading-font: "Georgia", serif;
-    --paragraph-font: Arial, Helvetica, sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--paragraph-font);
-    background: #fff;
-    color: #333;
-}
-
 header {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    align-items: center;
-    width: 840px;
-    margin: 0 auto;
-    background-color: var(--primary-color);
     color: #ffffff;
-    /* Resolve a violação de contraste no DevTools */
-}
-
-.logo {
-    width: 120px;
-    padding: 10px;
-    display: block;
-}
-
-#logo_link {
-    justify-self: center;
-}
-
-/* Navegação em CSS Flex */
-nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    width: 100%;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 20px;
-    display: block;
-    transition: background 0.3s, color 0.3s;
-}
-
-nav a:hover {
-    background: white;
-    color: var(--primary-color);
-}
-
-main {
-    width: 840px;
-    margin: auto;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-}
-
-.hero img {
-    width: 100%;
-    display: block;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    background: rgba(0, 0, 0, .45);
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-family: var(--heading-font);
-}
-
-.hero article {
-    position: absolute;
-    bottom: 35px;
-    left: 30px;
-    right: 30px;
-    background: rgba(231, 194, 79, .90);
-    padding: 20px;
-}
-
-.hero article img {
-    float: right;
-    width: 140px;
-    margin-left: 20px;
-}
-
-.hero article p {
-    color: #222;
-    line-height: 1.6;
-}
-
-/* Seções Gerais */
-section {
-    margin: 40px 0;
-}
-
-section h2 {
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: var(--heading-font);
-}
-
-/* Seção História */
-.historia p {
-    text-align: justify;
-    line-height: 1.8;
-    padding: 0 20px;
-}
-
-/* Seção Aventura - Layout com 5 imagens/figures */
-.galeria-aventuras {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 0 10px;
-}
-
-.galeria-aventuras figure {
-    flex: 1;
-    text-align: center;
-}
-
-.galeria-aventuras img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 4px;
-    display: block;
-}
-
-.galeria-aventuras figcaption {
-    margin-top: 8px;
-    font-size: 0.85rem;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-/* Footer Alinhado à Direita */
-footer {
-    width: 840px;
-    margin: 0 auto;
-    background: var(--primary-color);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
 }
 
 footer p {
@@ -177,20 +7,191 @@ footer p {
     color: #ffffff;
 }
 
-.socialmedia {
+.contato-main h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-family: var(--heading-font);
+    margin: 30px 0 10px;
+}
+
+/* Informações da Empresa e Mapa Google */
+.info-contato-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    background: #f4f8fb;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.info-empresa {
+    flex: 1;
+}
+
+.info-empresa h2 {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.info-empresa p {
+    text-align: left;
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.mapa-container {
+    flex: 1;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Equipe de Funcionários */
+.equipe-section {
+    margin: 40px 0;
+}
+
+.equipe-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.funcionario {
+    flex: 1;
+    text-align: center;
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.funcionario img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    border: 3px solid var(--primary-color);
+}
+
+.funcionario figcaption strong {
+    display: block;
+    font-size: 1.05rem;
+    color: #222;
+}
+
+.funcionario figcaption span {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* Formulário de Contato */
+.formulario-section {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--paragraph-font);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 4px rgba(57, 110, 148, 0.4);
+}
+
+/* Radio Buttons */
+.radio-group {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.radio-group legend {
+    font-weight: bold;
+    padding: 0 8px;
+    color: #333;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
 }
 
-.socialmedia a {
-    text-decoration: none;
+/* Checkbox */
+.checkbox-group label {
+    font-weight: normal;
     display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
 }
 
-.socialmedia img {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
+/* Botão de Envio Destinguível */
+.btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: center;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+    max-width: 250px;
+}
+
+.btn-submit:hover {
+    background-color: #2b5370;
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
 }
