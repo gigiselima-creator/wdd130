@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Página inicial da  Natural Living. Descubra a emoção do rafting, conheça nossos passeios e junte-se à aventura!">
+    <meta name="author" content="Gisele Rodrigues de Lima Albuquerque">
+    <title>Início | Natural Living</title>
+    <link rel="stylesheet" href="estilos/rafting.css">
+</head>
+
+<body>
+    <header>
+        <a id="logo_link" href="index.html">
+            <img class="logo" src="imagens/logotipo.jpg" alt=" Natural Living">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="passeios.html">Passeios</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <!-- Hero Section com Posicionamento Absoluto -->
+        <div class="hero">
+            <img src="imagens/hero.jpg" alt=" Natural Living" class="hero-img">
+            <div class="hero-msg">
+                <h1>Viva a Aventura Extrema!</h1>
+                <p>Sinta a adrenalina de domar as corredeiras com os melhores guias.</p>
+                <a href="passeios.html" class="btn-cta">Explore Nossos Passeios</a>
+            </div>
+        </div>
+
+        <!-- Seção de Inscrição na Newsletter -->
+        <section class="newsletter-section">
+            <h2>Fique por Dentro das Nossas Ofertas</h2>
+            <p>Cadastre-se para receber descontos exclusivos e novidades em primeira mão.</p>
+            <form action="#" method="post" class="form-newsletter">
+                <div class="form-row">
+                    <label for="nome-news">Nome</label>
+                    <input type="text" id="nome-news" name="nome-news" placeholder="Digite seu nome"
+                      required>
+                </div>
+                <div class="form-row">
+                    <label for="email-news">E-mail</label>
+                    <input type="email" id="email-news" name="email-news"
+                      placeholder="Digite seu e-mail" required>
+                </div>
+                <button type="submit" id="btn-newsletter" name="btn-newsletter"
+                  class="btn-submit">Inscrever-se</button>
+            </form>
+        </section>
+
+        <!-- Grid de Conteúdo e Destaques do Site -->
+        <section class="home-grid">
+            <article class="grid-card">
+                <img src="imagens/grupo.jpg" alt="Grupo praticando rafting">
+                <h3>Corredeiras para Todos os Níveis</h3>
+                <p>Oferecemos percursos que vão do nível iniciante ao avançado. Traga sua família ou
+                    amigos para um dia inesquecível de pura diversão e segurança no rio.</p>
+            </article>
+
+            <article class="grid-card">
+                <img src="imagens/equipamentos.jpg" alt="Equipamentos de segurança para rafting">
+                <h3>Segurança e Equipamentos de Ponta</h3>
+                <p>Nossa equipe conta com guias certificados internacionalmente e equipamentos
+                    revisados diariamente para garantir total proteção durante a expedição.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Conteúdo de Rodapé incluindo Ícones/Links de Mídia Social</p>
+        <nav class="redes-sociais">
+            <a href="https://www.facebook.com"><img src="imagens/facebook.png" alt="Facebook"></a>
+            <a href="https://www.whatsapp.com"><img src="imagens/whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com"><img src="imagens/instagram.png"
+                  alt="Instagram"></a>
+        </nav>
+    </footer>
+</body>
+
+</html>
