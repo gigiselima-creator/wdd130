@@ -1,15 +1,80 @@
-/* --- HERO SECTION (Posicionamento Absoluto) --- */
+/* ==========================================================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #fcfcfc;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO UNIFORMES
+   ========================================================================== */
+header {
+    background-color: #1b365d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+#logo_link {
+    display: inline-block;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0.8rem;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #0088cc;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   3. HERO SECTION (Posicionamento Absoluto - index.html)
+   ========================================================================== */
 .hero {
     position: relative;
     width: 100%;
+    max-height: 500px;
     overflow: hidden;
 }
 
 .hero-img {
     width: 100%;
-    height: 400px;
+    height: 450px;
     object-fit: cover;
-    display: block;
 }
 
 .hero-msg {
@@ -17,62 +82,121 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.75);
     color: #ffffff;
     padding: 2rem;
     text-align: center;
     border-radius: 8px;
-    width: 80%;
-    max-width: 600px;
+    width: 85%;
+    max-width: 650px;
 }
 
+.hero-msg h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.hero-msg p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   4. BOTÕES E CHAMADAS PARA AÇÃO (CTA)
+   ========================================================================== */
 .btn-cta {
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.8rem 1.6rem;
     background-color: #d9534f;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-cta:hover {
-    background-color: #c9302c;
+    background-color: #b52b27;
 }
 
-/* --- HOME GRID --- */
-.home-grid {
+.btn-submit {
+    padding: 0.8rem 1.5rem;
+    background-color: #1b365d;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0088cc;
+}
+
+/* ==========================================================================
+   5. LAYOUT CSS GRID (Home, Passeios e Equipe)
+   ========================================================================== */
+.home-grid,
+.passeios-cards,
+.equipe-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.grid-card {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+.grid-card,
+.card-passeio,
+.funcionario {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
-    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.grid-card img {
+.grid-card img,
+.card-passeio img,
+.funcionario img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 4px;
 }
 
-/* --- NEWSLETTER SECTION --- */
-.newsletter-section {
-    background-color: #e9ecef;
-    padding: 2rem;
+.grid-card h3,
+.card-conteudo h2,
+.equipe-section h2 {
+    padding: 1rem 1rem 0.5rem 1rem;
+    color: #1b365d;
+}
+
+.grid-card p,
+.card-conteudo p,
+figcaption {
+    padding: 0 1rem 1rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   6. FORMULÁRIOS E NEWSLETTER
+   ========================================================================== */
+.newsletter-section,
+.mapa-e-formulario {
+    max-width: 1000px;
     margin: 2rem auto;
-    text-align: center;
+    padding: 2rem;
+    background-color: #f4f6f8;
     border-radius: 8px;
-    max-width: 800px;
+}
+
+.newsletter-section {
+    text-align: center;
 }
 
 .form-newsletter {
@@ -81,43 +205,84 @@
     gap: 1rem;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
-/* --- PASSEIOS CARDS --- */
-.passeios-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-}
-
-.card-passeio {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.card-passeio img {
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
     width: 100%;
-    height: 220px;
-    object-fit: cover;
 }
 
-.card-conteudo {
-    padding: 1rem;
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 
-.passeios-cta {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #f0f4f8;
+.form-row label,
+.label-title {
+    font-weight: bold;
+    color: #1b365d;
 }
 
-/* --- TABELA DE PASSEIOS --- */
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+.radio-options label,
+.checkbox-row label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Container flex do mapa e formulário */
+.mapa-e-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.mapa-container,
+.form-contato {
+    flex: 1 1 400px;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* ==========================================================================
+   7. TABELA (Página de Passeios)
+   ========================================================================== */
 .tabela-section {
-    padding: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.tabela-section h2 {
+    margin-bottom: 1rem;
+    color: #1b365d;
+    text-align: center;
 }
 
 .tabela-container {
@@ -127,21 +292,149 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
+    background-color: #ffffff;
 }
 
 th,
 td {
-    border: 1px solid #ddd;
-    padding: 0.75rem;
+    border: 1px solid #dddddd;
+    padding: 0.8rem 1rem;
     text-align: left;
 }
 
 th {
-    background-color: #333;
-    color: #fff;
+    background-color: #1b365d;
+    color: #ffffff;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f8f9fa;
+}
+
+/* ==========================================================================
+   8. PÁGINA SOBRE NÓS (sobre.html)
+   ========================================================================== */
+.sobre-hero {
+    text-align: center;
+    padding: 3rem 1rem 2rem 1rem;
+    background-color: #f0f4f8;
+    margin-bottom: 2rem;
+}
+
+.sobre-hero h1 {
+    color: #1b365d;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.sobre-hero p {
+    font-size: 1.1rem;
+    color: #555555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre-historia,
+.sobre-missao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.sobre-historia img,
+.sobre-missao img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-texto h2 {
+    color: #1b365d;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #d9534f;
+    display: inline-block;
+    padding-bottom: 0.2rem;
+}
+
+.sobre-texto p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.sobre-aventuras {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.sobre-aventuras h2 {
+    color: #1b365d;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.galeria-grid figure {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.galeria-grid figcaption {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    color: #333333;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   9. RODAPÉ UNIFORME
+   ========================================================================== */
+footer {
+    background-color: #1b365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin-bottom: 0.8rem;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.redes-sociais img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.15);
 }
