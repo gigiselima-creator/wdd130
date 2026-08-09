@@ -314,98 +314,135 @@ tr:nth-child(even) {
 /* ==========================================================================
    8. PÁGINA SOBRE NÓS (sobre.html)
    ========================================================================== */
-.sobre-hero {
+/* 1. CONTAINER HERO EM FLUXO NORMAL (Sem posicionamento absoluto) */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 3rem 1rem 2rem 1rem;
-    background-color: #f0f4f8;
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto 1rem auto;
+    padding: 0 1rem;
+    position: static;
+    /* Garante que não empilhe por cima do resto */
+}
+
+.hero > img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    color: #1b365d;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 2. ARTIGO DE OBJETIVOS E IMAGEM DO CLIENTE */
+.hero article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
     margin-bottom: 2rem;
 }
 
-.sobre-hero h1 {
-    color: #1b365d;
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.sobre-hero p {
-    font-size: 1.1rem;
-    color: #555555;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.sobre-historia,
-.sobre-missao {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    align-items: center;
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-}
-
-.sobre-historia img,
-.sobre-missao img {
+.hero article img {
     width: 100%;
-    height: 320px;
-    object-fit: cover;
+    max-width: 450px;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: static;
+    /* Impede a imagem de flutuar na tela */
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.sobre-texto h2 {
+.hero article p {
+    line-height: 1.7;
+    color: #444444;
+    text-align: center;
+}
+
+/* 3. SEÇÃO HISTÓRIA SEPARADA E ABAIXO DO HERO */
+.historia {
+    clear: both;
+    width: 100%;
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.historia h2 {
     color: #1b365d;
     font-size: 1.8rem;
     margin-bottom: 1rem;
     border-bottom: 3px solid #d9534f;
     display: inline-block;
-    padding-bottom: 0.2rem;
+    padding-bottom: 0.3rem;
 }
 
-.sobre-texto p {
-    margin-bottom: 1rem;
-    line-height: 1.7;
+.historia p {
+    text-align: justify;
+    line-height: 1.8;
+    color: #444444;
 }
 
-.sobre-aventuras {
+/* 3. GALERIA DE AVENTURAS (DEMAIS IMAGENS ALINHADAS HORIZONTALMENTE) */
+.aventuras {
     max-width: 1100px;
     margin: 3rem auto;
     padding: 0 1.5rem;
     text-align: center;
 }
 
-.sobre-aventuras h2 {
+.aventuras h2 {
     color: #1b365d;
     font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.galeria-aventuras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 1.5rem;
 }
 
-.galeria-grid figure {
+.galeria-aventuras figure {
+    flex: 1 1 220px;
+    max-width: 300px;
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
 }
 
-.galeria-grid img {
+.galeria-aventuras img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
 }
 
-.galeria-grid figcaption {
+.galeria-aventuras figcaption {
     padding: 0.8rem;
-    font-size: 0.9rem;
-    color: #333333;
+    font-size: 0.95rem;
     font-weight: bold;
+    color: #1b365d;
+    text-align: center;
 }
 
 /* ==========================================================================
